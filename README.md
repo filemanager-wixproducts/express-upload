@@ -39,16 +39,18 @@ It will be instantiated with the following default options (which are overridabl
 		*/
 	}
 
-### EXAMPLE
+### Example
+The application provided is a little more elaborate than the bare minimum but shows the workings quite well (I think).
+
 To run the example please first run `bower install` & `npm install` in the root directory of the example. After bower & npm dependencies are finished installing, the application can be initiated with `node app.js` and will run at [localhost:3000](http://localhost:3000).
 
-### TODO
+### Todo
 Below are some items to be done before publicising this repository
 
 - Document example
-- Add grunt infrastructure
+- Add grunt/gulp automation
 - Add tests & test infrastructure
-- Provide url to download test files
+- Provide url to download test material
 
-### CREDITS
+### Credits
 Most of this code was inspired by code written by [Sebastian Tschan](https://github.com/blueimp/) whose excellent [Jquery File Upload](https://github.com/blueimp/jQuery-File-Upload) library was used to test this.
