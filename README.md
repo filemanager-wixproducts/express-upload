@@ -48,6 +48,8 @@ To run the example please first run `bower install` & `npm install` in the root 
 Below are some items to be done before publicising this repository
 
 - Document example
+- Update handler for GET DELETE
+- Do something with extra fields passed with upload
 - Add grunt/gulp automation
 - Add tests & test infrastructure
 - Provide url to download test material
