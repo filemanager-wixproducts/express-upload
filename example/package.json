@@ -1,0 +1,22 @@
+{
+  "name": "express-upload-example",
+  "author": "devcollectief",
+  "description": "express.js file upload middleware example application",
+  "keywords": [
+    "upload",
+    "express",
+    "middleware",
+    "multiple",
+    "files",
+    "example"
+  ],
+  "version": "0.0.1",
+  "main": "app.js",
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.4.7",
+    "swig": "~1.2.2",
+    "express-error-with-sources": "~1.2.0"
+  }
+}

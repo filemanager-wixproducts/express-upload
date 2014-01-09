@@ -1,0 +1,74 @@
+{% extends 'main.layout' %}
+
+{% block title %}{% parent %} | {{ title }}{% endblock %}
+
+{% block header %}
+  {% parent %}
+  <link href="/assets/css/upload.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+  <div class="page-header">
+    <h1>{{ title }}</h1>
+    <div class="pull-right" style="margin-top:-40px;">
+    <div class="btn-group" >
+      <button type="button" class="btn btn-success fileinput-button"><span class="glyphicon glyphicon-tasks"></span> Add Files<input id="fileupload" type="file" name="files[]" data-url="/upload" multiple></button>
+      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#" class="fileinput-clearlist"><span class="glyphicon glyphicon-trash"></span> Clear List</a></li>
+      </ul>
+    </div>
+    <button type="button" class="btn btn-default fileinput-upload" style="display:none;"><span class="glyphicon glyphicon-upload"></span> All</button>
+    </div>
+  </div>
+
+  <div id="total-progress" class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+      <span class="sr-only">0% Complete (success)</span>
+    </div>
+  </div>
+
+  <div class="file-container">
+    
+  </div>
+
+  <div class="dropzone" style="display:none;">
+    <div class="dropmessage">
+      <h1>Drop Files Here</h1>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block footerjs %}
+  {% parent %}
+  <script src="/assets/js/upload.js"></script>
+  <script src="/assets/vendor/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+  <script src="/assets/vendor/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+  <script src="/assets/vendor/jquery-file-upload/js/jquery.fileupload.js"></script>
+  <script src="/assets/vendor/blueimp-tmpl/js/tmpl.min.js"></script>
+  
+  {% raw %}
+  <script id="template-uploaditem" type="text/x-tmpl">
+    <div class="row">
+      <div class="col-md-4"><span style="font-size: 14px;" class="glyphicon glyphicon-cloud-upload"></span> {%= o.filename %}</div>
+      <div class="col-md-6">
+        <div class="progress" style="margin-top:2px">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            <span class="sr-only">0% Complete</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="btn-group pull-right">
+          <button type="button" class="btn btn-xs btn-default btn-upload"><span class="glyphicon glyphicon-upload"></span> Upload</button>
+        </div>
+      </div>
+    </div>
+  </script>
+  {% endraw %}
+
+{% endblock %}

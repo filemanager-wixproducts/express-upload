@@ -1,0 +1,12 @@
+{
+  "name": "express-upload-example",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.7.1",
+    "jquery": "~1.10.2",
+    "bootstrap": "~3.0.3",
+    "html5shiv": "~3.7.0",
+    "respond": "~1.4.2",
+    "jquery-file-upload": "~9.5.2"
+  }
+}

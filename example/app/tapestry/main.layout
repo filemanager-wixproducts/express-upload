@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ project.description }}">
+    <meta name="author" content="{{ project.author }}">
+    <link rel="shortcut icon" href="/assets/src/img/favicon.png">
+
+    <title>{% block title %}{{ project.title }}{% endblock %}</title>
+
+    <!-- Vendor Styling -->
+    <link href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Layout Styling -->
+    <link href="/assets/css/app.css" rel="stylesheet">
+
+    <!-- Compatibility -->
+    <!--[if lt IE 9]>
+      <script src="/assets/vendor/html5shiv/dist/html5shiv.js"></script>
+      <script src="/assets/vendor/respond/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- View Specific | Header -->
+    {% block header %}
+    {% endblock %}
+  </head>
+  <body>
+
+    <div id="wrap">
+      <div class="container">
+      {% block content %}{% endblock %}
+      </div><!-- /div.container -->
+    </div><!-- /div#wrap -->
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">{{ project.title }} Copyright {{ project.copyyear }} &copy; <a href="{{ project.authorurl }}">{{ project.author }}</a></p>
+      </div><!-- /div.container -->
+    </div><!-- /div#footer -->
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    <!-- View Specific | Footer -->
+    {% block footerjs %}
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "laxcomma": true,
+  "node": true,
+  "eqeqeq": true,
+  "forin" : true,
+  "undef": true,
+  "trailing": true,
+  "globals": {
+    "$": false,
+    "jQuery": false,
+    "document": false,
+    "window": false,
+    "alert": false
+  }
+}

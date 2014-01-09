@@ -1,0 +1,53 @@
+/* File Upload CSS
+-------------------------------------------------- */
+
+.dropzone {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: auto;
+    background: green;
+    opacity: 0.5;
+}
+
+.dropmessage {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;  
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  height: 50px;
+}
+
+.dropmessage H1 {
+  font-weight: bold;
+  color: white;
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+  .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}
