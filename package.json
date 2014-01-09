@@ -1,0 +1,25 @@
+{
+  "name": "express-upload",
+  "author": "devcollectief",
+  "description": "express.js file upload middleware",
+  "keywords": [
+    "upload",
+    "express",
+    "middleware",
+    "multiple",
+    "files"
+  ],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/devcollectief/express-upload.git"
+  },
+  "main": "index.js",
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "dependencies": {
+    "formidable": "~1.0.14",
+    "underscore": "~1.5.2",
+    "mkdirp": "~0.3.5"
+  }
+}

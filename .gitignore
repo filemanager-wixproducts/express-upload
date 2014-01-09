@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+metastats-client.sublime-project
+metastats-client.sublime-workspace
+.gisttoken
+dump.rdb
+ide
+vendor
