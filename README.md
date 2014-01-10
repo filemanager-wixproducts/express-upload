@@ -42,11 +42,16 @@ It will be instantiated with the following default options (which are overridabl
 ### Example
 The application provided is a little more elaborate than the bare minimum but shows the workings quite well (I think).
 
-It's assumed you have node/npm and bower installed, if not check [here](http://nodejs.org/download/) and [here](http://bower.io/). To run the example please first run `bower install` & `npm install` in the root directory of the example. After bower & npm dependencies are finished installing, the application can be initiated with `node app.js` and will run at [localhost:3000](http://localhost:3000).
+It's assumed you have node/npm and bower installed, if not check [here](http://nodejs.org/download/) and [here](http://bower.io/). 
+
+To run the example please first run `bower install` & `npm install` in the root directory of the example. Also `npm install` in the root of the repository if you haven't done so already. 
+
+After bower & npm dependencies are finished installing, the application can be initiated with `node app.js` and will run at [localhost:3000](http://localhost:3000).
 
 ### Todo
 Below are some items to be done before publicising this repository
 
+- Something freaky going on with Sublime Tab/Spaces settings and the files on github
 - Documentation for example
 - Do something with extra form fields passed with upload
 - Add grunt/gulp automation
