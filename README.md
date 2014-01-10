@@ -42,17 +42,17 @@ It will be instantiated with the following default options (which are overridabl
 ### Example
 The application provided is a little more elaborate than the bare minimum but shows the workings quite well (I think).
 
-To run the example please first run `bower install` & `npm install` in the root directory of the example. After bower & npm dependencies are finished installing, the application can be initiated with `node app.js` and will run at [localhost:3000](http://localhost:3000).
+It's assumed you have node/npm and bower installed, if not check [here](http://nodejs.org/download/) and [here](http://bower.io/). To run the example please first run `bower install` & `npm install` in the root directory of the example. After bower & npm dependencies are finished installing, the application can be initiated with `node app.js` and will run at [localhost:3000](http://localhost:3000).
 
 ### Todo
 Below are some items to be done before publicising this repository
 
-- Document example
-- Update handler for GET DELETE
-- Do something with extra fields passed with upload
+- Documentation for example
+- Do something with extra form fields passed with upload
 - Add grunt/gulp automation
 - Add tests & test infrastructure
 - Provide url to download test material
+- Complete [handler.js](https://github.com/devcollectief/express-upload/blob/master/lib/handler.js) for OPTIONS, HEAD, GET, PUT, DELETE requests, currently only POST is implemented.
 
 ### Credits
-Most of this code was inspired by code written by [Sebastian Tschan](https://github.com/blueimp/) whose excellent [Jquery File Upload](https://github.com/blueimp/jQuery-File-Upload) library was used to test this.
+Most of this code was inspired reading code written by [Sebastian Tschan](https://github.com/blueimp/) whose excellent [Jquery File Upload](https://github.com/blueimp/jQuery-File-Upload) library was used to test this.
