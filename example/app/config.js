@@ -9,7 +9,9 @@ module.exports = function(app) {
 
   // App Configuration
   app.set('title', 'express-upload example');
-  app.set('port', 3000);
+  app.set('port', process.env.PORT || 3000);
+
+  // start server 
   app.use(function(req, res, next) {
     res.locals = {
       project: {

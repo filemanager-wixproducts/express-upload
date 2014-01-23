@@ -6,3 +6,4 @@ ide
 vendor
 upload
 credentials.json
+.elasticbeanstalk/
