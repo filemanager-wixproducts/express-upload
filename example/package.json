@@ -19,6 +19,6 @@
     "swig": "~1.2.2",
     "underscore": "*",
     "express-error-with-sources": "~1.2.0",
-    "express-upload": "git://github.com/devcollectief/express-upload.git
+    "express-upload": "git://github.com/devcollectief/express-upload.git"
   }
 }
