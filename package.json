@@ -9,7 +9,7 @@
     "multiple",
     "files"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/devcollectief/express-upload.git"
@@ -21,7 +21,7 @@
     "formidable": "~1.0.14",
     "underscore": "~1.5.2",
     "mkdirp": "~0.3.5",
-    "knox": "~0.8.8",
-    "knox-mpu": "~0.1.6"
+    "aws-sdk": "~2.0.0-rc8",
+    "mime": "~1.2.11"
   }
 }

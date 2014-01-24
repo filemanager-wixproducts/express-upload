@@ -1,5 +1,5 @@
 var _ = require('underscore')
-  , upload = require('./../../');
+  , upload = require('express-upload'); //./../../
 
 module.exports = function(app) {
 

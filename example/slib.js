@@ -1,7 +1,7 @@
 var fs = require('fs')
   , mime = require('mime')
   , cred = require('./credentials.json')
-  , s3mp = require('./s3mp.js');
+  , s3mp = require('./../lib/s3mp.js');
 
 var file = fs.createReadStream('./fake.mp4');
 
