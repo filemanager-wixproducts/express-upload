@@ -1,6 +1,10 @@
 {
   "name": "express-upload-example",
   "author": "devcollectief",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/devcollectief/express-upload.git"
+  }
   "description": "express.js file upload middleware example application",
   "keywords": [
     "upload",
