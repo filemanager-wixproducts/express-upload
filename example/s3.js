@@ -90,7 +90,7 @@ var s3actions = {
   }
 };
 
-// Abort Uploads
+// Abort Uploads (Should be Parametrised)
 var abort = true;
 if(abort) {
   s3actions.abortUploads(cred.bucket);
