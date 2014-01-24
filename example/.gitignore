@@ -6,5 +6,4 @@ ide
 vendor
 upload
 credentials.json
-.elasticbeanstalk/
 *.mp4
