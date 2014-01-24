@@ -5,3 +5,5 @@ dump.rdb
 ide
 vendor
 upload
+.elasticbeanstalk
+credentials.json
