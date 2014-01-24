@@ -7,3 +7,4 @@ vendor
 upload
 .elasticbeanstalk
 credentials.json
+*.mp4
