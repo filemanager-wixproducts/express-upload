@@ -20,10 +20,8 @@
     "underscore": "*",
     "express-error-with-sources": "~1.2.0",
     "express-upload": "git://github.com/devcollectief/express-upload.git",
-    "knox": "*",
     "node-uuid": "~1.4.1",
     "aws-sdk": "~2.0.0-rc8",
-    "node-mime": "~1.0.0",
     "mime": "~1.2.11"
   }
 }
