@@ -69,7 +69,7 @@ Express will redirect to the Server Upload method at `/upload`. Going to [localh
             "region": "/* desired region */",
             "maxRetries": 15
         }
-   }
+    }
 
 ### Todo
 Below are some items to be done before publicising this repository
