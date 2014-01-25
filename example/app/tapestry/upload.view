@@ -13,7 +13,7 @@
     <h1>{{ title }}</h1>
     <div class="pull-right" style="margin-top:-40px;">
     <div class="btn-group" >
-      <button type="button" class="btn btn-success fileinput-button"><span class="glyphicon glyphicon-tasks"></span> Add Files<input id="fileupload" type="file" name="files[]" data-url="/upload" multiple></button>
+      <button type="button" class="btn btn-success fileinput-button"><span class="glyphicon glyphicon-tasks"></span> Add Files<input id="fileupload" type="file" name="files[]" data-url="{{ uploadpath }}" multiple></button>
       <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
         <span class="caret"></span>
       </button>

@@ -14,18 +14,21 @@ function clearFileList() {
 }
 
 // File Upload
+var acceptFileTypes = /(\.|\/)(txt|zip|avi|mp4|mpg|mpeg|m4v|mov|mkv)$/i;
 $(function () {
   $('#fileupload').fileupload({
 
     // Settings
     dataType: 'json',
     autoUpload: false,
-    formData: { sessid : '{{ user._id }}' },
-    acceptFileTypes: /(\.|\/)(avi|mp4|mpg|mpeg|m4v|mov|mkv)$/i,
+    // formData: { sessid : '{{ user._id }}' },
+    acceptFileTypes: acceptFileTypes,
 
     // Uploading Done
     done: function (e, data) {
-        console.log('File upload done %s',data);
+        console.log('File upload done');
+        console.log(e);
+        console.log(data);
     },
 
     // Total Progress
@@ -52,7 +55,7 @@ $(function () {
     // File(s) Added
     add: function (e, data) {
       $.each(data.files, function (index, file) {
-        if((/\.(mov|m4a|3gp|3g2|mj2|mpg|mpeg|m4v|mkv|avi|mp4)$/i).test(file.name)) {
+        if((acceptFileTypes).test(file.name)) {
 
           // Generate File Element
           var node = template('#template-uploaditem', {

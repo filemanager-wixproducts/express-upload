@@ -4,7 +4,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/devcollectief/express-upload.git"
-  }
+  },
   "description": "express.js file upload middleware example application",
   "keywords": [
     "upload",
@@ -23,7 +23,7 @@
     "swig": "~1.2.2",
     "underscore": "*",
     "express-error-with-sources": "~1.2.0",
-    "express-upload": "git://github.com/devcollectief/express-upload.git",
+    "express-upload": "git://github.com/devcollectief/express-upload.git#release",
     "node-uuid": "~1.4.1",
     "aws-sdk": "~2.0.0-rc8",
     "mime": "~1.2.11"
