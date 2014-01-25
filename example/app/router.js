@@ -1,5 +1,5 @@
 var _ = require('underscore')
-  , upload = require('./../../');
+  , upload = require('express-upload'); //./../../
 
 module.exports = function(app) {
 
@@ -13,6 +13,9 @@ module.exports = function(app) {
   });
 
   // ROUTE: ALL /upload 
-  app.use('/upload', upload.handler({}));
+  app.use('/upload', upload.handler({
+    aws: require('./../credentials.json'),
+    streams3: true
+  }));
 
 };
