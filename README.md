@@ -46,6 +46,8 @@ It will be instantiated with the following default options (which are overridabl
 	}
 
 ### Example
+![screen](http://oi43.tinypic.com/n6vy4l.jpg "Screenshot Example")
+
 The application provided is a little more elaborate than the bare minimum but shows the workings quite well (I think).
 
 It's assumed you have node/npm and bower installed, if not check [here](http://nodejs.org/download/) and [here](http://bower.io/). 
