@@ -23,8 +23,7 @@ module.exports = function(app) {
 
     // ROUTE: ALL /upload 
   app.use('/s3upload', upload.s3handler({
-    aws: require('./../credentials.json'),
-    streams3: true
+    aws: require('./../credentials.json')
   }));
 
 };

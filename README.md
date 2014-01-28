@@ -79,6 +79,7 @@ Below are some items to be done before publicising this repository
 - Add grunt/gulp automation
 - Add tests & test infrastructure
 - Provide url to download test material
+- Added S3 Layer adds Extra Errors to Propagate back to Client, Must Propagate Properly :)
 - Complete [handler.js](https://github.com/devcollectief/express-upload/blob/master/lib/handler.js) for OPTIONS, HEAD, GET, PUT, DELETE requests, currently only POST is implemented.
 
 ### Credits
