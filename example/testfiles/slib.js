@@ -6,9 +6,18 @@ var fs = require('fs')
 //var file = fs.createReadStream('./fake.mp4');
 
 var uploader = new s3mp({
-  credentials: cred.aws,
-  bucket: cred.bucket
+  credentials: cred.aws.secret,
+  bucket: cred.aws.bucket,
+  region: cred.aws.region
   //mime: mime.lookup('./fake.mp4')
+});
+
+uploader.on('abort', function(data) {
+  console.log('Multipart upload aborted with data: %s', JSON.stringify(data));
+});
+
+uploader.on('error', function(data) {
+  console.log('Error with data: %s', JSON.stringify(data));
 });
 
 // uploader.getStream('fake.mp4', function(err, ws) {
@@ -28,4 +37,4 @@ var uploader = new s3mp({
 //   console.log('Upload Aborted: %s', JSON.stringify(data));
 // });
 
-uploader.abortUploads(cred.bucket);
+uploader.abortUploads(cred.aws.bucket);
