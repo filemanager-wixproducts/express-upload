@@ -8,6 +8,12 @@ express.js file upload middleware
 * v0.1 Multipart file upload to server as express middleware. With elaborate example app
 
 * v0.2 Multipart file upload (skip server) streamed direct to Amazon S3 with aws-sdk multipart api stream wrapper.
+* v0.2.1 Multiple Updates
+  - Refactoring and removal of console.log statements for debugging. Nice to know but after a while it's all clutter. Middleware emits messages & errors now.
+  - Updated credentials handling, DRYer (double credentials before was ridiculous)
+  - Finish statement works better, when testing locally make sure you handle ajax post request timeout of jquery because amazon might take a while to push chunks.
+
+
 
 ### Description
 This is an express middleware module to handle file uploads. It uses the popular [node-formidable](https://github.com/felixge/node-formidable) to parse the incoming http and works very well with [jquery-file-upload](https://github.com/blueimp/jQuery-File-Upload).
@@ -23,27 +29,38 @@ And ofcourse declare upload as such:
 
 It will be instantiated with the following default options (which are overridable as shown above):
 
-	{
-		dirs: {
-			tmp: process.env.TMP || process.env.TMPDIR || process.env.TEMP || '/tmp' || process.cwd(),
-			upload: './upload'
-		},
-		maxPostSize: 11*1024*1024*1024,
-		maxFileSize: 10*1024*1024*1024,
-		minFileSize: 1,
-		acceptedFileTypes: /.+/i,
-		accessControl: {
-		allowOrigin: '*',
-		allowMethods: 'OPTIONS, HEAD, GET, POST, PUT, DELETE',
-		allowHeaders: 'Content-Type, Content-Range, Content-Disposition'
-		},
-		/* Uncomment and edit this section to provide the service via HTTPS:
-		ssl: {
-			key: fs.readFileSync('/Applications/XAMPP/etc/ssl.key/server.key'),
-			cert: fs.readFileSync('/Applications/XAMPP/etc/ssl.crt/server.crt')
-		}
-		*/
-	}
+```javascript
+{ 
+  dirs: {
+    tmp: process.env.TMP || process.env.TMPDIR || process.env.TEMP || '/tmp' || process.cwd(),
+    upload: './upload'
+  },
+  maxPostSize: 11*1024*1024*1024,
+  maxFileSize: 10*1024*1024*1024,
+  minFileSize: 1,
+  aws: {
+    secret: {
+      accessKeyId: '',
+      secretAccessKey: '',
+    },
+    bucket: '',
+    region: '',
+    maxRetries: 15
+  },
+  acceptedFileTypes: /.+/i,
+  accessControl: {
+    allowOrigin: '*',
+    allowMethods: 'OPTIONS, HEAD, GET, POST, PUT, DELETE',
+    allowHeaders: 'Content-Type, Content-Range, Content-Disposition'
+  },
+  ssl: {
+    key: '', //fs.readFileSync('/location/to/key.key'),
+    cert: '' //fs.readFileSync('/location/to/certificate.crt')
+  }
+}
+```
+
+the `upload.handler()` middleware above can be replaced with `upload.s3handler()` ofcourse to handle uploads directly to S3. (Provide AWS Options)
 
 ### Example
 ![screen](http://oi43.tinypic.com/n6vy4l.jpg "Screenshot Example")
@@ -60,18 +77,19 @@ Express will redirect to the Server Upload method at `/upload`. Going to [localh
 
 **IMPORTANT** When using the S3 method please make sure you have a `credentials.json` file in your example folder with the following structure (refactor at will ofcourse).
 
-    {
-        "name": "/* any name */",
-        "key": "/* aws keyid */",
-        "secret": "/* aws secretaccesskey */",
-        "bucket": "/* bucket name */",
-        "aws": {
-            "accessKeyId": "/* aws keyid */",
-            "secretAccessKey": "/* aws secretaccesskey */",
-            "region": "/* desired region */",
-            "maxRetries": 15
-        }
-    }
+```javascript
+{
+  aws: {
+    secret: {
+      accessKeyId: '',
+      secretAccessKey: '',
+    },
+    bucket: '',
+    region: '',
+    maxRetries: 15
+  }
+}
+```
 
 ### Todo
 Below are some items to be done before publicising this repository
