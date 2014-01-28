@@ -79,14 +79,14 @@ Express will redirect to the Server Upload method at `/upload`. Going to [localh
 
 ```javascript
 {
-  aws: {
-    secret: {
-      accessKeyId: '',
-      secretAccessKey: '',
+  "aws": {
+    "secret": {
+      "accessKeyId": '',
+      "secretAccessKey": '',
     },
-    bucket: '',
-    region: '',
-    maxRetries: 15
+    "bucket": '',
+    "region": '',
+    "maxRetries": 15
   }
 }
 ```
