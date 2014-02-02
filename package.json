@@ -21,7 +21,7 @@
     "formidable": "~1.0.14",
     "underscore": "~1.5.2",
     "mkdirp": "~0.3.5",
-    "aws-sdk": "~2.0.0-rc8",
+    "aws-sdk": "~2.0.0-rc9",
     "mime": "~1.2.11",
     "node-uuid": "~1.4.1",
     "async": "~0.2.10"
